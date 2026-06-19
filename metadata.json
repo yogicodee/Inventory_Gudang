@@ -1,0 +1,6 @@
+{
+  "name": "Gudang Ferswit",
+  "description": "Sistem Manajemen Gudang (WMS) Ferswit - Solusi multi-gudang, scanning resi real-time, manajemen inventory, tracking return, dan analisis pesanan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
