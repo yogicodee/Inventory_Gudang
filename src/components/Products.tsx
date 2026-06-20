@@ -13,3 +13,8 @@ interface ProductsProps {
     onEditProduct: (product: Product) => void;
     onDeleteProduct: (id: string) => void;
 }
+
+export default function Products({ products, warehouses, onAddProduct, onEditProduct, onDeleteProduct }: ProductsProps) {
+    const [searchQuery, setSearchQuery] = useState<string>('');
+    const [selectedCategory, setSelectedCategory] = useState<string>('all');
+    const [activeSubTab, setActiveSubTab] = useState<'daftar' | 'harga'>('daftar');
