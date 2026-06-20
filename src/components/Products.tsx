@@ -5,3 +5,11 @@ import {
     Percent, ArrowUpDown, Filter, X, Tag, ListFilter, CheckCircle2, Copy
 } from 'lucide-react';
 import { Product, Warehouse } from '../types';
+
+interface ProductsProps {
+    products: Product[];
+    warehouses: Warehouse[];
+    onAddProduct: (prod: Omit<Product, 'id'>) => void;
+    onEditProduct: (product: Product) => void;
+    onDeleteProduct: (id: string) => void;
+}
