@@ -31,3 +31,6 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
     const [hpp, setHpp] = useState<number>(10000);
     const [agencyPrice, setAgencyPrice] = useState<number>(12500);
     const [warehouseStockQty, setWarehouseStockQty] = useState<Record<string, number>>({});
+
+    // Barcode export modal
+    const [showBarcodePrint, setShowBarcodePrint] = useState<Product | null>(null);
