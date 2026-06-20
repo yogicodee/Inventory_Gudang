@@ -18,3 +18,7 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
     const [searchQuery, setSearchQuery] = useState<string>('');
     const [selectedCategory, setSelectedCategory] = useState<string>('all');
     const [activeSubTab, setActiveSubTab] = useState<'daftar' | 'harga'>('daftar');
+
+    // Modal State
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+    const [editingProduct, setEditingProduct] = useState<Product | null>(null);
