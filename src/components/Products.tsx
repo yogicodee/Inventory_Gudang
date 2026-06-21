@@ -117,3 +117,10 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
         const code = Math.floor(100000000000 + Math.random() * 900000000000).toString();
         setBarcode(code);
     };
+    // Filter products based on search and category
+    const filteredProducts = products.filter(p => {
+        const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            p.barcode.includes(searchQuery);
+        const matchesCategory = selectedCategory === 'all' || selectedCategory === 'Semua Kategori' || p.category === selectedCategory;
+        return matchesSearch && matchesCategory;
+    });
