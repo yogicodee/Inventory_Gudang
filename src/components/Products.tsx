@@ -79,3 +79,15 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
     const handleFormSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (!name || !barcode) return;
+        // Total stock is sum of warehouse stock
+        const current_stock = (Object.values(warehouseStockQty) as number[]).reduce((sum: number, qty: number) => sum + qty, 0);
+
+        const productPayload = {
+            name,
+            barcode,
+            category,
+            price,
+            hpp,
+            current_stock,
+            warehouse_stocks: warehouseStockQty
+        };
