@@ -59,3 +59,23 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
         resetForm();
         setIsModalOpen(true);
     };
+    const openEditModal = (p: Product) => {
+        setEditingProduct(p);
+        setName(p.name);
+        setBarcode(p.barcode);
+        setCategory(p.category);
+        setPrice(p.price);
+        setHpp(p.hpp);
+        setAgencyPrice(p.price - 2500); // Back-calculate agency pricing
+
+        const initStocks: Record<string, number> = {};
+        warehouses.forEach(wh => {
+            initStocks[wh.id] = p.warehouse_stocks[wh.id] || 0;
+        });
+        setWarehouseStockQty(initStocks);
+        setIsModalOpen(true);
+    };
+
+    const handleFormSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!name || !barcode) return;
