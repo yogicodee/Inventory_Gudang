@@ -79,6 +79,7 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
     const handleFormSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (!name || !barcode) return;
+
         // Total stock is sum of warehouse stock
         const current_stock = (Object.values(warehouseStockQty) as number[]).reduce((sum: number, qty: number) => sum + qty, 0);
 
@@ -91,3 +92,28 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
             current_stock,
             warehouse_stocks: warehouseStockQty
         };
+
+        if (editingProduct) {
+            onEditProduct({
+                ...editingProduct,
+                ...productPayload
+            });
+        } else {
+            onAddProduct(productPayload);
+        }
+
+        setIsModalOpen(false);
+        resetForm();
+    };
+
+    const handleStockChange = (whId: string, value: number) => {
+        setWarehouseStockQty({
+            ...warehouseStockQty,
+            [whId]: Math.max(0, value)
+        });
+    };
+
+    const generateBarcodeRandom = () => {
+        const code = Math.floor(100000000000 + Math.random() * 900000000000).toString();
+        setBarcode(code);
+    };
