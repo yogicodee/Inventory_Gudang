@@ -34,3 +34,6 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
 
     // Barcode export modal
     const [showBarcodePrint, setShowBarcodePrint] = useState<Product | null>(null);
+
+    // Categories
+    const categories = ['Semua Kategori', 'Minuman Herbal', 'Saffron', 'Bahan Organik', 'Premium Blend', 'Packing Material'];
