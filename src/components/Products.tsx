@@ -37,3 +37,25 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
 
     // Categories
     const categories = ['Semua Kategori', 'Minuman Herbal', 'Saffron', 'Bahan Organik', 'Premium Blend', 'Packing Material'];
+    const resetForm = () => {
+        setName('');
+        setBarcode('');
+        setCategory('Minuman Herbal');
+        setPrice(15000);
+        setHpp(10000);
+        setAgencyPrice(12500);
+
+        // Init warehouse stocks
+        const initStocks: Record<string, number> = {};
+        warehouses.forEach(wh => {
+            initStocks[wh.id] = 0;
+        });
+        setWarehouseStockQty(initStocks);
+
+        setEditingProduct(null);
+    };
+
+    const openAddModal = () => {
+        resetForm();
+        setIsModalOpen(true);
+    };
