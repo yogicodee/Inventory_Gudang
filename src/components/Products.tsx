@@ -124,3 +124,14 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
         const matchesCategory = selectedCategory === 'all' || selectedCategory === 'Semua Kategori' || p.category === selectedCategory;
         return matchesSearch && matchesCategory;
     });
+    return (
+        <div className="space-y-6" id="products-view">
+
+            {/* View Header with main Action */}
+            <div className="bg-white p-4 rounded-lg shadow-sm border border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h1 className="text-lg font-bold text-slate-800 tracking-tight flex items-center gap-2 font-sans">
+                        <Package className="text-indigo-600" size={18} /> Katalog Master Produk
+                    </h1>
+                    <p className="text-slate-500 text-xs">Kelola spesifikasi produk, harga jual, margin keuntungan HPP, serta kode barcode</p>
+                </div>
