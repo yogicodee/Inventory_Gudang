@@ -156,3 +156,18 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
                     onClick={() => setActiveSubTab('harga')}
                     className={`px-4 py-2.5 text-xs font-semibold border-b-2 transition-all ${activeSubTab === 'harga' ? 'border-indigo-600 text-indigo-700' : 'border-transparent text-slate-500 hover:text-slate-800'}`}
                 >
+                </button>
+            </div>
+
+            {/* Quick filters bar */}
+            <div className="flex flex-col md:flex-row gap-3 items-center justify-between bg-white p-3 rounded-lg border border-slate-200">
+                <div className="relative w-full md:max-w-xs">
+                    <input
+                        type="text"
+                        placeholder="Cari SKU, Nama Produk, Barcode..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="w-full text-xs p-2 bg-slate-50 border border-slate-200 rounded focus:outline-hidden focus:border-indigo-500"
+                    />
+                    <Search size={13} className="absolute left-2.5 top-2.5 text-slate-400" />
+                </div>
