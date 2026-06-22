@@ -151,3 +151,8 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
                     onClick={() => setActiveSubTab('daftar')}
                     className={`px-4 py-2.5 text-xs font-semibold border-b-2 transition-all ${activeSubTab === 'daftar' ? 'border-indigo-600 text-indigo-700' : 'border-transparent text-slate-500 hover:text-slate-800'}`}
                 >
+                </button>
+                <button
+                    onClick={() => setActiveSubTab('harga')}
+                    className={`px-4 py-2.5 text-xs font-semibold border-b-2 transition-all ${activeSubTab === 'harga' ? 'border-indigo-600 text-indigo-700' : 'border-transparent text-slate-500 hover:text-slate-800'}`}
+                >
