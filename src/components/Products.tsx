@@ -135,3 +135,19 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
                     </h1>
                     <p className="text-slate-500 text-xs">Kelola spesifikasi produk, harga jual, margin keuntungan HPP, serta kode barcode</p>
                 </div>
+
+
+                <button
+                    onClick={openAddModal}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold px-3.5 py-2 rounded-md shadow-sm transition-colors flex items-center gap-1.5 self-start md:self-auto cursor-pointer"
+                >
+                    <Plus size={14} /> Tambah Produk Baru
+                </button>
+            </div>
+
+            {/* Sub tabs: Catalog list vs Pricing Matrix */}
+            <div className="flex border-b border-slate-200">
+                <button
+                    onClick={() => setActiveSubTab('daftar')}
+                    className={`px-4 py-2.5 text-xs font-semibold border-b-2 transition-all ${activeSubTab === 'daftar' ? 'border-indigo-600 text-indigo-700' : 'border-transparent text-slate-500 hover:text-slate-800'}`}
+                >
