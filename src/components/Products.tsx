@@ -180,8 +180,8 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
                                 key={cat}
                                 onClick={() => setSelectedCategory(cat === 'Semua Kategori' ? 'all' : cat)}
                                 className={`py-0.5 px-2.5 text-[10px] font-bold rounded border ${(cat === 'Semua Kategori' && selectedCategory === 'all') || selectedCategory === cat
-                                        ? 'bg-indigo-50 border-indigo-200 text-indigo-700'
-                                        : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
+                                    ? 'bg-indigo-50 border-indigo-200 text-indigo-700'
+                                    : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
                                     }`}
                             >
                                 {cat}
@@ -190,4 +190,13 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
                     </div>
                 </div>
             </div>
+
+            {/* Content Rendering based on SubTab */}
+            {activeSubTab === 'daftar' ? (
+                // Tab: Master Metadata & Stok
+                <div className="bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+                    <div className="overflow-x-auto">
+                        <table className="w-full text-xs text-left whitespace-nowrap">
+                            <thead className="bg-slate-50 border-b border-slate-150 text-slate-500 font-bold uppercase text-[9px] tracking-wider">
+                                <tr>
 
