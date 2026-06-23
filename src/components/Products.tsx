@@ -171,3 +171,23 @@ export default function Products({ products, warehouses, onAddProduct, onEditPro
                     />
                     <Search size={13} className="absolute left-2.5 top-2.5 text-slate-400" />
                 </div>
+
+                <div className="flex items-center gap-2 flex-wrap w-full md:w-auto">
+                    <span className="text-[11px] font-semibold text-slate-400 flex items-center gap-1"><ListFilter size={13} /> Filter Kategori:</span>
+                    <div className="flex flex-wrap gap-1">
+                        {categories.map(cat => (
+                            <button
+                                key={cat}
+                                onClick={() => setSelectedCategory(cat === 'Semua Kategori' ? 'all' : cat)}
+                                className={`py-0.5 px-2.5 text-[10px] font-bold rounded border ${(cat === 'Semua Kategori' && selectedCategory === 'all') || selectedCategory === cat
+                                        ? 'bg-indigo-50 border-indigo-200 text-indigo-700'
+                                        : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
+                                    }`}
+                            >
+                                {cat}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
