@@ -21,4 +21,5 @@ export default function Resellers({
   onDownloadKit
 }: ResellersProps) {
   const [activeSegment, setActiveSegment] = useState<'supervisor' | 'portal'>('supervisor');
-
+  // Reseller Portal Active tab
+  const [portalTab, setPortalTab] = useState<'profile' | 'invoices' | 'ar' | 'kits' | 'bank'>('kits');
