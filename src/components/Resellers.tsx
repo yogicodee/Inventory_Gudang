@@ -13,3 +13,12 @@ interface ResellersProps {
   onUpdateTempoStatus: (id: string, status: 'Pending' | 'Approved' | 'Rejected') => void;
   onDownloadKit: (id: string) => void;
 }
+export default function Resellers({
+  tempoApplies,
+  marketingKits,
+  onAddTempoApply,
+  onUpdateTempoStatus,
+  onDownloadKit
+}: ResellersProps) {
+  const [activeSegment, setActiveSegment] = useState<'supervisor' | 'portal'>('supervisor');
+
