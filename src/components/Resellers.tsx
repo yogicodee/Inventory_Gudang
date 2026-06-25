@@ -60,3 +60,10 @@ export default function Resellers({
             onClick={() => setActiveSegment('supervisor')}
             className={`px-3 py-1.5 text-xs font-bold rounded transition-all flex items-center gap-1.5 ${activeSegment === 'supervisor' ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 hover:text-slate-850'}`}
           ></button>
+          🛡️ Supervisor Panel (Tempo AR)
+        </button>
+        <button
+          type="button"
+          onClick={() => setActiveSegment('portal')}
+          className={`px-3 py-1.5 text-xs font-bold rounded transition-all flex items-center gap-1.5 ${activeSegment === 'portal' ? 'bg-indigo-650 text-white shadow-xs' : 'text-slate-600 hover:text-slate-850'}`}
+        ></button>
