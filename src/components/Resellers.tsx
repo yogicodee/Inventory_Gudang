@@ -67,3 +67,7 @@ export default function Resellers({
           onClick={() => setActiveSegment('portal')}
           className={`px-3 py-1.5 text-xs font-bold rounded transition-all flex items-center gap-1.5 ${activeSegment === 'portal' ? 'bg-indigo-650 text-white shadow-xs' : 'text-slate-600 hover:text-slate-850'}`}
         ></button>
+        🛒 Reseller Client Portal (Aset KIT)
+      </button>
+    </div>
+      </div >
