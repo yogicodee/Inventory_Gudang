@@ -23,3 +23,7 @@ export default function Resellers({
   const [activeSegment, setActiveSegment] = useState<'supervisor' | 'portal'>('supervisor');
   // Reseller Portal Active tab
   const [portalTab, setPortalTab] = useState<'profile' | 'invoices' | 'ar' | 'kits' | 'bank'>('kits');
+  // Apply Form state (simulation of submitting a credit request)
+  const [resellerNameInput, setResellerNameInput] = useState<string>('');
+  const [requestLimitAmount, setRequestLimitAmount] = useState<number>(5000000);
+  const [successBanner, setSuccessBanner] = useState<string>('');
