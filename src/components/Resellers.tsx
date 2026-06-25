@@ -42,3 +42,14 @@ export default function Resellers({
     setSuccessBanner('Pengajuan credit limit tempo berhasil dikirim! Silakan tunggu persetujuan Supervisor.');
     setTimeout(() => setSuccessBanner(''), 5000);
   };
+  return (
+    <div className="space-y-6" id="reseller-portal-view">
+
+      {/* Segment switcher with title */}
+      <div className="bg-white p-4 rounded-lg shadow-sm border border-slate-200 flex flex-col xl:flex-row xl:items-center justify-between gap-4">
+        <div>
+          <h1 className="text-lg font-bold text-slate-800 tracking-tight flex items-center gap-2 font-sans">
+            <Users className="text-indigo-600" size={18} /> Portal Kemitraan & Manajemen Reseller
+          </h1>
+          <p className="text-slate-550 text-xs">Persetujuan tempo piutang dagang reseller (AR), serta penyediaan aset marketing pendukung penjualan</p>
+        </div>
