@@ -27,3 +27,18 @@ export default function Resellers({
   const [resellerNameInput, setResellerNameInput] = useState<string>('');
   const [requestLimitAmount, setRequestLimitAmount] = useState<number>(5000000);
   const [successBanner, setSuccessBanner] = useState<string>('');
+  const handleApplyTempo = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!resellerNameInput) return;
+
+    onAddTempoApply({
+      reseller_name: resellerNameInput,
+      amount: requestLimitAmount,
+      status: 'Pending'
+    });
+
+    setResellerNameInput('');
+    setRequestLimitAmount(5000000);
+    setSuccessBanner('Pengajuan credit limit tempo berhasil dikirim! Silakan tunggu persetujuan Supervisor.');
+    setTimeout(() => setSuccessBanner(''), 5000);
+  };
