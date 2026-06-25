@@ -53,3 +53,10 @@ export default function Resellers({
           </h1>
           <p className="text-slate-550 text-xs">Persetujuan tempo piutang dagang reseller (AR), serta penyediaan aset marketing pendukung penjualan</p>
         </div>
+        {/* Segment controls */}
+        <div className="flex bg-slate-100 p-0.5 rounded-md border border-slate-200">
+          <button
+            type="button"
+            onClick={() => setActiveSegment('supervisor')}
+            className={`px-3 py-1.5 text-xs font-bold rounded transition-all flex items-center gap-1.5 ${activeSegment === 'supervisor' ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 hover:text-slate-850'}`}
+          ></button>
