@@ -71,3 +71,8 @@ export default function Resellers({
       </button>
     </div>
       </div >
+
+    { activeSegment === 'supervisor' ? (
+
+    // Supervisor approval stream view
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
