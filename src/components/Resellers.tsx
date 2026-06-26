@@ -76,3 +76,48 @@ export default function Resellers({
 
     // Supervisor approval stream view
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      {/* Submit form on left column */}
+      <div className="lg:col-span-4 bg-white p-4 rounded-lg border border-slate-200 shadow-sm h-fit space-y-4">
+        <div className="border-b pb-2 border-slate-100">
+          <h3 className="text-xs font-bold text-slate-700 uppercase tracking-wider">💳 Ajukan Credit Limit Tempo (AR)</h3>
+        </div>
+
+        {successBanner && (
+          <div className="p-2.5 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold rounded text-center">
+            {successBanner}
+          </div>
+        )}
+
+        <form onSubmit={handleApplyTempo} className="space-y-3.5">
+          <div>
+            <label className="block text-xs font-bold text-slate-500 mb-1 uppercase">Nama Toko / Agen Reseller</label>
+            <input
+              type="text"
+              value={resellerNameInput}
+              onChange={(e) => setResellerNameInput(e.target.value)}
+              placeholder="e.g., CV. Herbal Sejahtera Jakarta"
+              className="w-full text-xs font-bold p-2 bg-slate-50 border border-slate-200 rounded focus:outline-hidden focus:border-indigo-500"
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block text-xs font-bold text-slate-500 mb-1 uppercase">Vol Limit Pengajuan (Rupiah)</label>
+            <div className="relative">
+              <span className="absolute left-3 top-2 text-slate-400 font-bold text-xs">Rp</span>
+              <input
+                type="number"
+                value={requestLimitAmount}
+                onChange={(e) => setRequestLimitAmount(parseInt(e.target.value) || 1000000)}
+                className="w-full text-xs font-mono font-bold p-2 pl-9 bg-slate-50 border border-slate-200 rounded text-indigo-700 focus:outline-hidden focus:border-indigo-500"
+                step="500000"
+                min="1000000"
+                required
+              />
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            className="w-full py-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded shadow-sm transition cursor-pointer"
+          ></button>
