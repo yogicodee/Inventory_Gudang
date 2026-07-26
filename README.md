@@ -27,6 +27,23 @@ Aplikasi berupa React 19 SPA yang di-serve oleh server Express. Data disimpan pa
 | Data      | File `db.json` (auto-seed, tidak perlu DB eksternal) |
 | AI (opsional) | `@google/genai` (Gemini) — memerlukan `GEMINI_API_KEY` |
 
+## Struktur Proyek
+
+```
+Inventory_Gudang/
+├── server.ts          # Server Express + seluruh REST API + seed db.json
+├── index.html         # Entry HTML
+├── vite.config.ts     # Konfigurasi Vite (middleware mode di dev)
+├── src/
+│   ├── main.tsx       # Bootstrap React
+│   ├── App.tsx        # Root: auth, state global, routing tab, semua handler API
+│   ├── types.ts       # Definisi TypeScript untuk seluruh entitas
+│   └── components/     # Dashboard, Scanner, Products, Warehouses,
+│                       # Inventory, Returns, PurchaseOrders, Resellers, dst.
+└── .env.example
+```
+
+
 
 
 
