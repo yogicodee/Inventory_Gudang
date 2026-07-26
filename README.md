@@ -42,6 +42,20 @@ Inventory_Gudang/
 │                       # Inventory, Returns, PurchaseOrders, Resellers, dst.
 └── .env.example
 ```
+## Menjalankan Secara Lokal
+
+**Prasyarat:** Node.js 18+.
+
+```bash
+# 1. Install dependency
+npm install
+
+# 2. (Opsional) siapkan environment
+cp .env.example .env      # isi GEMINI_API_KEY bila memakai fitur AI
+
+# 3. Jalankan mode development
+npm run dev
+```
 
 
 
