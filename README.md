@@ -18,5 +18,15 @@ Aplikasi berupa React 19 SPA yang di-serve oleh server Express. Data disimpan pa
 - **Portal Reseller** — pengajuan limit tempo (kredit) dan unduhan marketing kit.
 - **Laporan & Pelacakan** — riwayat scan dan pelacakan resi.
 
+## Tech Stack
+
+| Layer     | Teknologi |
+|-----------|-----------|
+| Frontend  | React 19, TypeScript, Vite 6, Tailwind CSS 4, Framer Motion (`motion`), lucide-react |
+| Backend   | Express 4, dijalankan via `tsx` (dev) / esbuild bundle (prod) |
+| Data      | File `db.json` (auto-seed, tidak perlu DB eksternal) |
+| AI (opsional) | `@google/genai` (Gemini) — memerlukan `GEMINI_API_KEY` |
+
+
 
 
