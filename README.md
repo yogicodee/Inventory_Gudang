@@ -77,5 +77,26 @@ Buka http://localhost:3000. File `db.json` akan dibuat otomatis saat request per
 
 > ⚠️ Password disimpan sebagai plaintext di `db.json` — ini murni untuk demo/prototipe, **jangan** dipakai di produksi.
 
+## Ringkasan REST API
+
+Seluruh endpoint di-handle oleh [`server.ts`](server.ts).
+
+| Method & Endpoint                     | Keterangan |
+|---------------------------------------|------------|
+| `POST /api/login`                     | Autentikasi user |
+| `GET /api/db`                         | Ambil seluruh state database |
+| `POST/PUT/DELETE /api/products/:id?`  | CRUD produk |
+| `POST/PUT/DELETE /api/warehouses/:id?`| CRUD gudang |
+| `POST/DELETE /api/locations/:id?`     | Tambah/hapus lokasi rak |
+| `POST/PUT/DELETE /api/raw_materials/:id?` | CRUD bahan baku |
+| `POST /api/scans`                     | Aksi scan kirim/return (mengubah stok) |
+| `POST /api/scans/clear`               | Kosongkan riwayat scan |
+| `POST/PUT /api/returns/:id?`          | Buat/update return (`Selesai` = restock) |
+| `POST/PUT /api/claims/:id?`           | Buat/update klaim kerusakan |
+| `POST/PUT /api/purchase_orders/:id?`  | Buat/update PO (`Received` = tambah stok) |
+| `POST/PUT /api/packing_requests/:id?` | Permohonan packing (`Disetujui` = kurangi stok) |
+| `POST/PUT /api/tempo/:id?`            | Pengajuan/keputusan limit tempo reseller |
+| `POST /api/marketing_kits/download`   | Increment jumlah unduhan marketing kit |
+
 
 
