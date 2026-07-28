@@ -67,7 +67,15 @@ Buka http://localhost:3000. File `db.json` akan dibuat otomatis saat request per
 | `npm start`     | Menjalankan hasil build (`NODE_ENV=production`) |
 | `npm run lint`  | Type-check dengan `tsc --noEmit` |
 
+## Kredensial Demo
 
+| Peran        | Username   | Password   |
+|--------------|------------|------------|
+| Super Admin  | `admin`    | `admin`    |
+| Scan Operator| `operator` | `operator` |
+| Reseller     | `reseller` | `reseller` |
+
+> ⚠️ Password disimpan sebagai plaintext di `db.json` — ini murni untuk demo/prototipe, **jangan** dipakai di produksi.
 
 
 
