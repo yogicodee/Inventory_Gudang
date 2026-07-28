@@ -56,6 +56,16 @@ cp .env.example .env      # isi GEMINI_API_KEY bila memakai fitur AI
 # 3. Jalankan mode development
 npm run dev
 ```
+Buka http://localhost:3000. File `db.json` akan dibuat otomatis saat request pertama.
+
+### Script yang tersedia
+
+| Script          | Fungsi |
+|-----------------|--------|
+| `npm run dev`   | Menjalankan server Express + Vite (middleware mode) di port 3000 |
+| `npm run build` | Build frontend (Vite) dan bundle server ke `dist/server.cjs` |
+| `npm start`     | Menjalankan hasil build (`NODE_ENV=production`) |
+| `npm run lint`  | Type-check dengan `tsc --noEmit` |
 
 
 
