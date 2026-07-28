@@ -98,5 +98,11 @@ Seluruh endpoint di-handle oleh [`server.ts`](server.ts).
 | `POST/PUT /api/tempo/:id?`            | Pengajuan/keputusan limit tempo reseller |
 | `POST /api/marketing_kits/download`   | Increment jumlah unduhan marketing kit |
 
+## Catatan
+
+- `db.json` di-ignore oleh Git (lihat `.gitignore`) dan bersifat lokal per instance.
+- HMR dapat dinonaktifkan lewat env `DISABLE_HMR=true` (dipakai di lingkungan AI Studio).
+
+
 
 
