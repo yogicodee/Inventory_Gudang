@@ -1,4 +1,5 @@
 <img width="1337" height="653" alt="image" src="https://github.com/user-attachments/assets/bebab30c-1473-4f8d-8e3e-642ac3558889" />
+<img width="1359" height="654" alt="image" src="https://github.com/user-attachments/assets/1c0db9f1-7561-4ac5-8b4f-24e0beaac3d0" />
 
 # Gudang Ferswit — Warehouse Management System (WMS)
 
